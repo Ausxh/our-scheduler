@@ -1,0 +1,58 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: "Helvetica";
+}
+
+nav {
+    overflow: hidden;
+    background-color: #E6A923
+}
+
+nav a {
+    text-decoration: none;
+}
+
+main {
+    margin: 50px;
+}
+
+#logo {
+    float: left;
+    color: #FFFFFF;
+    font-size: 150%;
+    margin-left: 20px;
+    padding: 20px;
+    background-color: #003755;
+}
+
+#profile {
+    float: right;
+    font-size: 150%;
+    margin-right: 20px;
+    padding: 20px;
+    color: #FFFFFF;
+}
+
+#configuration {
+    display: flex;
+    gap: 5%;
+    width: 100%;
+}
+
+#courses {
+    width: 35vw;
+    display: flex;
+    align-items: center;
+}
+
+#breaks {
+    width: 35vw;
+    display: flex;
+    align-items: center;
+}
+
+
+.add {
+    margin-left: auto;
+}
