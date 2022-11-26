@@ -37,7 +37,6 @@ main {
 #configuration {
     display: flex;
     gap: 5%;
-    width: 100%;
 }
 
 #courses {
@@ -55,4 +54,11 @@ main {
 
 .add {
     margin-left: auto;
+}
+
+.add button {
+    padding: 7px;
+    color: white;
+    background-color: #0956A3;
+    font-size: 105%;
 }
