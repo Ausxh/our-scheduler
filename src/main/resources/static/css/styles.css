@@ -14,21 +14,21 @@ nav a {
 }
 
 main {
-    margin: 50px;
+    margin: 20px 80px;
 }
 
 #logo {
     float: left;
     color: #FFFFFF;
-    font-size: 150%;
-    margin-left: 20px;
+    font-size: 130%;
+    margin-left: 80px;
     padding: 20px;
     background-color: #003755;
 }
 
 #profile {
     float: right;
-    font-size: 150%;
+    font-size: 130%;
     margin-right: 20px;
     padding: 20px;
     color: #FFFFFF;
@@ -39,16 +39,31 @@ main {
     gap: 5%;
 }
 
-#courses {
-    width: 35vw;
+.tableHead {
     display: flex;
     align-items: center;
 }
 
+#configuration table {
+    border-collapse: collapse;
+    width: 100%;
+}
+
+#configuration th {
+    text-align: left;
+}
+
+#configuration td {
+    border: 1px solid black;
+    padding: 10px;
+}
+
+#courses {
+    width: 35vw;
+}
+
 #breaks {
     width: 35vw;
-    display: flex;
-    align-items: center;
 }
 
 
@@ -56,9 +71,13 @@ main {
     margin-left: auto;
 }
 
-.add button {
-    padding: 7px;
+button {
+    padding: 13px;
     color: white;
     background-color: #0956A3;
     font-size: 105%;
+}
+
+#generate {
+    ba
 }

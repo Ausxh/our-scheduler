@@ -5,18 +5,42 @@
     <div id="configuration">
 
         <div id="courses">
-            <h1 style="float: left;">Courses</h1>
-            <div class="add">
-                <button>+ Add Course</button>
+            <div class="tableHead">
+                <h1 style="float: left;">Courses</h1>
+                <div class="add">
+                    <button>+ Add Course</button>
+                </div>
             </div>
-        </div>
-        <div>
+            <table>
+                <tr>
+                    <th>CourseName</th>
+                </tr>
+                <tr>
+                    <td>Class 1</td>
+                </tr>
+                <tr>
+                    <td>Class 2</td>
+                </tr>
+            </table>
         </div>
         <div id="breaks">
-            <h1>Breaks</h1> 
-            <div class="add">
-                <button>+ Add Break</button>
+            <div class="tableHead">
+                <h1>Breaks</h1> 
+                <div class="add">
+                    <button>+ Add Break</button>
+                </div>
             </div>
+            <table>
+                <tr>
+                    <th>Description</th>
+                </tr>
+                <tr>
+                    <td>Break 1</td>
+                </tr>
+                <tr>
+                    <td>Break 2</td>
+                </tr>
+            </table>
         </div>
     </div>
 
@@ -24,5 +48,6 @@
         <h1>Schedules</h1>
     </div>
     <hr>
+    <button id="generate"> Generate schedules </button>
 </main
 {{> footer}}
