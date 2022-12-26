@@ -8,7 +8,9 @@
             <div class="tableHead">
                 <h1 style="float: left;">Courses</h1>
                 <div class="add">
-                    <button>+ Add Course</button>
+                    <form action="edit" method="get">
+                        <button value="course" name="type" type="submit">+ Add Course</button>
+                    </form>
                 </div>
             </div>
             <table>
@@ -27,7 +29,9 @@
             <div class="tableHead">
                 <h1>Breaks</h1> 
                 <div class="add">
-                    <button>+ Add Break</button>
+                    <form action="edit" method="get">
+                        <button value="break" name="type" type="submit">+ Add Break</button>
+                    </form>
                 </div>
             </div>
             <table>
@@ -49,5 +53,5 @@
     </div>
     <hr>
     <button id="generate"> Generate schedules </button>
-</main
+</main>
 {{> footer}}

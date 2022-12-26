@@ -14,5 +14,11 @@ class HtmlController {
         model["title"] = "ourscheduler"
         return "ourscheduler"
     }
+
+    @GetMapping("/edit")
+    fun edit(model: Model): String {
+        model["title"] = "ourscheduler"
+        return "edit"
+    }
 }
 
