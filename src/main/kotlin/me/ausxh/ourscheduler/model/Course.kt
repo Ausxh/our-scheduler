@@ -7,7 +7,6 @@ import javax.persistence.*
 class Course constructor() {
 
     @Id
-    // @GeneratedValue(strategy = GenerationType.AUTO)
     var id: Int? = null;
 
     var section: String? = null
