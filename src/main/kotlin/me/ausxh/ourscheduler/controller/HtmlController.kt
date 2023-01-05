@@ -1,5 +1,9 @@
 package me.ausxh.ourscheduler.controller;
 
+import me.ausxh.ourscheduler.repository.CourseRepository
+import org.springframework.http.ResponseEntity
+import org.springframework.beans.factory.annotation.Autowired
+
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model
 import org.springframework.ui.set
@@ -11,14 +15,9 @@ class HtmlController {
 
     @GetMapping("/")
     fun ourscheduler(model: Model): String {
-        model["title"] = "ourscheduler"
+        model["pageTitle"] = "ourscheduler"
         return "ourscheduler"
     }
 
-    @GetMapping("/edit")
-    fun edit(model: Model): String {
-        model["title"] = "ourscheduler"
-        return "edit"
-    }
 }
 

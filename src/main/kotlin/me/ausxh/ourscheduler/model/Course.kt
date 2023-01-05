@@ -7,13 +7,13 @@ import javax.persistence.*
 class Course constructor() {
 
     @Id
-    var id: Int? = null;
+    var id: Int? = null
 
     var section: String? = null
     var classNumber: Int? = null
-    var instructionType: String? = null
+    var instruction_type: String? = null
     var title: String? = null
-    var satisifes: String? = null
+    var satisfies: String? = null
     var credits: Double? = null
     var type: String? = null
     var days: String? = null
