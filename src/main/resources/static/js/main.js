@@ -7,19 +7,13 @@ function getCookieValue(name)
 }
 
 var select = document.getElementById('courses')
-var input = document.getElementById('test')
 var myTableContainer = document.getElementById('availableSections')
 select.onchange = function() {
     const xhttp = new XMLHttpRequest();
 
     // Define a callback function
     xhttp.onload = function() {
-        // var response = JSON.parse(xhttp.responseText);
         myTableContainer.innerHTML = xhttp.responseText
-        // for (const course in response) {
-        //     console.log(course.section)
-        // }
-        // input.innerHTML = response[0].section;
     }
 
     // Send a request
