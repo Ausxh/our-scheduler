@@ -1,22 +1,19 @@
 {{> header}}
 {{> navbar}}
 
-<main id="main">
-    <div id="content">
-        <form>
-            <label for="Course Name">Choose a course:</label>
-            <select id="courses" name="course">
+<div id="content">
+    <form>
+        <label for="Course Name">Choose a course:</label>
+        <select id="courses" name="course">
 
-                {{#courseTitles}}
-                <option value="{{.}}">{{.}}</option>
-                {{/courseTitles}}
-                
-            </select>
-        </form>
-        <h2 id="test"></h2>
-        <table id="availableSections">
-        </table>
-    </div>
-</main>
+            {{#courseTitles}}
+            <option value="{{.}}">{{.}}</option>
+            {{/courseTitles}}
+
+        </select>
+    </form>
+    <table id="availableSections">
+    </table>
+</div>
 
 {{> footer}}
