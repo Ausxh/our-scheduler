@@ -78,6 +78,24 @@ button {
     font-size: 105%;
 }
 
-#generate {
-    ba
+
+/* edit.html */
+
+#content {
+    margin-left: 20px;
+    margin-top: 20px;
+}
+
+#availableSections {
+    padding: 5px;
+    padding-left: 0px;
+    max-width: 100%;
+    margin: 0;
+
+}
+
+#availableSections td, th {
+    padding: 20px;
+    padding-left: 0px;
+    text-align: left;
 }
