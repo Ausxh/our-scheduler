@@ -1,0 +1,21 @@
+package me.ausxh.ourscheduler.model;
+
+import javax.persistence.*
+import org.hibernate.annotations.GenericGenerator
+import org.hibernate.annotations.Type
+import java.util.*
+
+@Entity
+@Table(name = "app_user")
+class AppUser constructor() {
+
+    @Id
+    @GeneratedValue(generator = "uuid2")
+    @GenericGenerator(name = "uuid2", strategy = "uuid2")
+    @Column(name = "id", columnDefinition = "CHAR(36)")
+    @Type(type = "uuid-char")
+    var id: UUID = UUID.randomUUID()
+
+    var username: String? = null
+    var password: String? = null
+}
