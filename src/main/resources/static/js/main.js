@@ -24,3 +24,29 @@ select.onchange = function() {
         courseTitle: select.value
     }));
 }
+
+
+function confirmAdd() 
+{
+    const xhttp = new XMLHttpRequest();
+
+    // Define a callback function
+    xhttp.onload = function() {
+        var response = JSON.parse(xhttp.responseText)
+        if(!getCookieValue("id")) {
+            var expiryDate = new Date()
+            document.cookie = "id=" + response.id + "; expires=" + expiryDate.getMonth() + 1
+        }
+
+    }
+
+    // Send a request
+    xhttp.open("POST", "confirmAdd");
+    xhttp.setRequestHeader("Content-Type", "application/json");
+    xhttp.setRequestHeader("X-CSRFToken", getCookieValue("csrftoken"));
+    xhttp.send(JSON.stringify({
+        id: getCookieValue("id"),
+        courseTitle: "math32"
+    }));
+
+}
