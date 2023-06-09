@@ -7,7 +7,7 @@ import org.springframework.stereotype.Repository
 
 @Repository
 interface CourseRepository : JpaRepository<Course, Int>{
-    fun findByTitle(title: String): List<Course>
+    fun findByTitle(title: String): List<Course?>
     
     @Query("SELECT DISTINCT a.title FROM Course a ORDER BY title")
     fun findDistinctTitle(): List<String>;
