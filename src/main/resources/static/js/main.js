@@ -26,7 +26,7 @@ select.onchange = function() {
 }
 
 
-function confirmAdd() 
+function confirmAdd(id) 
 {
     const xhttp = new XMLHttpRequest();
 
@@ -46,7 +46,7 @@ function confirmAdd()
     xhttp.setRequestHeader("X-CSRFToken", getCookieValue("csrftoken"));
     xhttp.send(JSON.stringify({
         id: getCookieValue("id"),
-        courseTitle: "math32"
+        classId: id
     }));
 
 }
