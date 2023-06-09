@@ -12,7 +12,7 @@ import org.springframework.ui.set
 import org.springframework.web.bind.annotation.GetMapping
 import org.springframework.web.bind.annotation.PostMapping
 import org.springframework.web.bind.annotation.RequestBody
-import org.springframework.stereotype.Controller;
+import org.springframework.stereotype.Controller
 
 
 @Controller
@@ -31,6 +31,5 @@ class CourseController(private val courseRepository: CourseRepository) {
         model["courseTitles"] = courseRepository.findDistinctTitle()
         return "edit"
     }
-
 }
 
