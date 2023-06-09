@@ -14,7 +14,7 @@ class AppUser constructor() {
     @GenericGenerator(name = "uuid2", strategy = "uuid2")
     @Column(name = "id", columnDefinition = "CHAR(36)")
     @Type(type = "uuid-char")
-    var id: UUID = UUID.randomUUID()
+    var id: UUID? = null
 
     var username: String? = null
     var password: String? = null
