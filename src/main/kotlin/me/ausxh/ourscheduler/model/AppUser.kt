@@ -1,9 +1,11 @@
 package me.ausxh.ourscheduler.model;
 
 import javax.persistence.*
+
 import org.hibernate.annotations.GenericGenerator
 import org.hibernate.annotations.Type
-import java.util.*
+
+import java.util.UUID
 
 @Entity
 @Table(name = "app_user")
@@ -18,4 +20,7 @@ class AppUser constructor() {
 
     var username: String? = null
     var password: String? = null
+
+    @OneToMany(cascade = [CascadeType.ALL])
+    var courseList: Set<Course?> = setOf<Course>()
 }
