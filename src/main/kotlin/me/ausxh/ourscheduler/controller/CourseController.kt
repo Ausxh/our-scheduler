@@ -1,5 +1,7 @@
 package me.ausxh.ourscheduler.controller
 
+import me.ausxh.ourscheduler.model.Course
+
 import me.ausxh.ourscheduler.repository.CourseRepository
 
 import com.fasterxml.jackson.databind.node.ObjectNode
