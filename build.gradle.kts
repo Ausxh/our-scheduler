@@ -17,6 +17,11 @@ repositories {
 }
 
 dependencies {
+    implementation("me.ausxh.scheduleGen:schedule-gen") {
+        version {
+            branch = "main"
+        }
+    }
     implementation("org.springframework.boot:spring-boot-starter-data-jpa")
     developmentOnly("org.springframework.boot:spring-boot-devtools")
     runtimeOnly("org.postgresql:postgresql")
