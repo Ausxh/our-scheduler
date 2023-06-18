@@ -21,7 +21,7 @@ select.onchange = function() {
     xhttp.setRequestHeader("Content-Type", "application/json");
     xhttp.setRequestHeader("X-CSRFToken", getCookieValue("csrftoken"));
     xhttp.send(JSON.stringify({
-        courseTitle: select.value
+        subject: select.value
     }));
 }
 

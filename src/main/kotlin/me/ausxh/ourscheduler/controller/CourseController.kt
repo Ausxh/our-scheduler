@@ -3,6 +3,7 @@ package me.ausxh.ourscheduler.controller
 import me.ausxh.ourscheduler.model.Course
 
 import me.ausxh.ourscheduler.repository.CourseRepository
+import me.ausxh.ourscheduler.repository.SubjectRepository
 
 import com.fasterxml.jackson.databind.node.ObjectNode
 
@@ -18,19 +19,21 @@ import org.springframework.stereotype.Controller
 
 
 @Controller
-class CourseController(private val courseRepository: CourseRepository) {
+class CourseController(private val courseRepository: CourseRepository, private val subjectRepository: SubjectRepository) {
 
     @PostMapping("/getSections", MediaType.APPLICATION_JSON_VALUE)
     fun table(@RequestBody json: ObjectNode, model: Model): String {
-        val title = json.get("courseTitle").asText()
-        model["sections"] = courseRepository.findByTitle(title)
+        val subSymbol = json.get("subject").asText()
+        val subject = subjectRepository.findBySymbol(subSymbol).get(0)
+        println(subject)
+        model["sections"] = courseRepository.findBySubject(subject)
         return "sectionList"
     }
 
     @GetMapping("/addClass")
     fun edit(model: Model): String {
         model["pageTitle"] = "ourscheduler"
-        model["courseTitles"] = courseRepository.findDistinctTitle()
+        model["courseTitles"] = subjectRepository.findDistinctSymbol()
         return "edit"
     }
 }

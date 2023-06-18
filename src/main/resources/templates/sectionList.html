@@ -1,5 +1,5 @@
 <tr>
-    <th>Section</th>
+    <th>Title</th>
     <th>Class Number</th>
     <th>Instruction Mode</th>
     <th>Satisfies</th>
@@ -14,11 +14,11 @@
 </tr>
 {{#sections}}
 <tr>
-    <td>{{section}}</td>
+    <td>{{subject.symbol}}: {{subject.title}}</td>
     <td>{{classNumber}}</td>
     <td>{{instruction_type}}</td>
-    <td>{{satisfies}}</td>
-    <td>{{credits}}</td>
+    <td>{{subject.satisfies}}</td>
+    <td>{{subject.credits}}</td>
     <td>{{type}}</td>
     <td>{{days}}</td>
     <td>{{times}}</td>

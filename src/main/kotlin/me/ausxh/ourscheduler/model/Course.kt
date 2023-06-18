@@ -9,12 +9,8 @@ class Course constructor() {
     @Id
     var id: Int? = null
 
-    var section: String? = null
     var classNumber: Int? = null
     var instruction_type: String? = null
-    var title: String? = null
-    var satisfies: String? = null
-    var credits: Double? = null
     var type: String? = null
     var days: String? = null
     var times: String? = null
@@ -23,4 +19,7 @@ class Course constructor() {
     var dates: String? = null
     var seats: Int? = null
     var comments: String? = null
+
+    @ManyToOne(cascade = [CascadeType.ALL])
+    var subject: Subject? = null
 }
