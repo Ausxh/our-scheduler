@@ -23,4 +23,7 @@ class AppUser constructor() {
 
     @OneToMany(cascade = [CascadeType.ALL])
     var courseList: Set<Course?> = setOf<Course>()
+
+    @OneToMany(cascade = [CascadeType.ALL])
+    var subjectList: Set<Subject?> = setOf<Subject>()
 }
