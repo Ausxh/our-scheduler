@@ -11,7 +11,6 @@ import java.util.UUID
 import org.springframework.http.MediaType
 
 import org.springframework.ui.set
-
 import org.springframework.web.bind.annotation.PostMapping
 import org.springframework.web.bind.annotation.RequestBody
 import org.springframework.web.bind.annotation.RestController
@@ -21,7 +20,7 @@ import org.springframework.web.bind.annotation.RestController
 class CourseRestController(private val courseRepository: CourseRepository, private val appUserRepository: AppUserRepository) {
 
     @PostMapping("/confirmAdd", MediaType.APPLICATION_JSON_VALUE)
-    fun add(@RequestBody json: ObjectNode): HashMap<String, UUID?> {
+    fun addSection(@RequestBody json: ObjectNode): HashMap<String, UUID?> {
         var user: AppUser? = null
         if(json.has("id")) {
             val id: UUID = UUID.fromString(json.get("id").asText())
