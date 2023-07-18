@@ -8,8 +8,6 @@ import org.springframework.stereotype.Repository
 @Repository
 interface SubjectRepository : JpaRepository<Subject, Int>{
 
-    @Query("SELECT a.symbol FROM Subject a ORDER BY symbol")
-    fun findDistinctSymbol(): List<String?>;
-    fun findBySymbol(symbol: String): List<Subject?>;
+    fun findBySymbol(symbol: String): List<Subject?>
     
 }
