@@ -2,6 +2,7 @@ package me.ausxh.ourscheduler.controller;
 
 import me.ausxh.ourscheduler.repository.*
 import me.ausxh.ourscheduler.model.Course
+import me.ausxh.ourscheduler.model.Subject
 
 import org.springframework.http.ResponseEntity
 import org.springframework.beans.factory.annotation.Autowired
@@ -21,11 +22,11 @@ class HtmlController(private val appUserRepository: AppUserRepository) {
     @GetMapping("/")
     fun ourscheduler(@CookieValue(value = "id") userId: UUID?, model: Model): String {
         model["pageTitle"] = "ourscheduler"
-        var courseList: List<Course?> = listOf<Course?>()
+        var subjectList: List<Subject?> = listOf<Subject?>()
         if(userId != null) 
-            courseList = appUserRepository.findUserById(userId).get(0)?.courseList!!.toList()
+            subjectList = appUserRepository.findUserById(userId).get(0)?.subjectList!!.toList()
 
-        model["courses"] = courseList
+        model["subjects"] = subjectList
         return "ourscheduler"
     }
 
