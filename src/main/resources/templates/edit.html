@@ -2,15 +2,16 @@
 {{> navbar}}
 
 <div id="content">
-    <form>
+    <form method="POST" action="/addSubject">
         <label for="Course Name">Choose a course:</label>
-        <select id="courses" name="course">
+        <select id="courses" name="subjectId">
 
             {{#courseTitles}}
-            <option value="{{.}}">{{.}}</option>
+            <option value="{{id}}">{{symbol}}</option>
             {{/courseTitles}}
-
         </select>
+        <br><br>
+        <button type=submit>Add Class</button>
     </form>
     <table id="availableSections">
     </table>
