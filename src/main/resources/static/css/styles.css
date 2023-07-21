@@ -78,6 +78,16 @@ button {
     font-size: 105%;
 }
 
+#scheduleList {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+#scheduleList > div {
+    flex: 50%;
+    padding-top: 40px;
+}
+
 
 /* edit.html */
 
