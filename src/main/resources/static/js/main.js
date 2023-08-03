@@ -15,6 +15,7 @@ function generateSchedules()
     xhttp.onload = function() {
         var response = JSON.parse(xhttp.responseText)
 
+        scheduleList.innerHTML = ""
         for (var i = 0; i < response.length; i++) {
         var div = document.createElement("div")
             for(var j = 0; j < response[i].length; j++) {
