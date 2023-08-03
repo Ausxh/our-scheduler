@@ -9,5 +9,6 @@ import org.springframework.stereotype.Repository
 interface SubjectRepository : JpaRepository<Subject, Int>{
 
     fun findBySymbol(symbol: String): List<Subject?>
+    fun findByTypeOrderBySymbolAsc(type: String): List<Subject?>
     
 }

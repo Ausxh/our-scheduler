@@ -33,7 +33,6 @@ class CourseController(private val appUserRepository: AppUserRepository, private
     fun table(@RequestBody json: ObjectNode, model: Model): String {
         val subSymbol = json.get("subject").asText()
         val subject = subjectRepository.findBySymbol(subSymbol).get(0)
-        println(subject)
         model["sections"] = courseRepository.findBySubject(subject)
         return "sectionList"
     }
@@ -41,7 +40,7 @@ class CourseController(private val appUserRepository: AppUserRepository, private
     @GetMapping("/addClass")
     fun edit(model: Model): String {
         model["pageTitle"] = "ourscheduler"
-        model["courseTitles"] = subjectRepository.findAll()
+        model["courseTitles"] = subjectRepository.findByTypeOrderBySymbolAsc("LEC")
         return "edit"
     }
 

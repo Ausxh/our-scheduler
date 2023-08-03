@@ -13,5 +13,6 @@ class Subject constructor() {
     var title: String? = null
     var satisfies: String? = null
     var credits: Double? = null
+    var type: String? = null
 
 }
