@@ -47,8 +47,8 @@ class Course constructor() {
         val dateFormatter: DateTimeFormatter = DateTimeFormatter.ofPattern("MM/dd/uu")
 
         return Event(
-            endTime = LocalTime.parse(end_time, timeFormatter),
-            startTime = LocalTime.parse(start_time, timeFormatter),
+            endTime = if (end_time?.isEmpty() ?: true) null else LocalTime.parse(end_time, timeFormatter),
+            startTime = if (start_time?.isEmpty() ?: true) null else LocalTime.parse(start_time, timeFormatter),
             days = days?.map { when(it) {
                 'M' -> DayOfWeek.MONDAY
                 'T' -> DayOfWeek.TUESDAY
