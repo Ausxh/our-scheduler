@@ -17,12 +17,17 @@ function generateSchedules()
 
         scheduleList.innerHTML = ""
         for (var i = 0; i < response.length; i++) {
-        var div = document.createElement("div")
+            var div = document.createElement("div")
+            var schedButton = document.createElement("button")
+            schedButton.innerHTML = "View"
+            schedButton.setAttribute("onclick", "viewSchedule(this)");
             for(var j = 0; j < response[i].length; j++) {
                 course = response[i][j]
                 div.innerHTML += course.subject.title + " " + course.start_time + " " + course.end_time + " " + course.days + "<br>"
+                schedButton.setAttribute("data-value-" + j, course.id);
             }
             scheduleList.appendChild(div)
+            div.append(schedButton)
         }
     }
 
@@ -32,4 +37,15 @@ function generateSchedules()
     xhttp.setRequestHeader("X-CSRFToken", getCookieValue("csrftoken"));
     xhttp.send();
 
+}
+
+function viewSchedule(button) {
+    console.log(JSON.stringify(button.dataset))
+    var idList = [];
+    for (var course in button.dataset) {
+        idList.push(button.dataset[course])
+    }
+
+    var url = "/viewSchedule?classes=" + encodeURIComponent(idList.join(","));
+    window.location.href = url;
 }

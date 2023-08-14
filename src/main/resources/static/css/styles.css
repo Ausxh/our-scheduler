@@ -88,6 +88,45 @@ button {
     padding-top: 40px;
 }
 
+/* Calendar */
+ 
+#calendar {
+    width: 100vw;
+    display: flex;
+    margin-left: 5px;
+}
+
+#calendarDays {
+    display: flex;
+    width: 100%;
+}
+
+#calendarDays div {
+    padding: 30px;
+    width: 100%;
+    text-align: center;
+    border: 1px solid;
+}
+
+#times {
+    margin-top: 78.5px;
+    margin-right: 10px;
+    text-align: right;
+    border: 1px solid;
+}
+
+#classes {
+    display: flex;
+    width: 100%;
+    height: 92%;
+    border: 1px solid;
+}
+
+#classes div {
+    padding: 3px;
+    margin: 3px;
+}
+
 
 /* edit.html */
 

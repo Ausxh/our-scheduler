@@ -1,0 +1,36 @@
+{{> header}}
+{{> navbar}}
+<div id='calendar'>
+    <div id='times'>
+        <div>
+
+        </div>
+        {{#times}}
+        <div>
+            {{.}}
+        </div>
+        {{/times}}
+    </div>
+    <div id='calendarContent'>
+        <div id='calendarDays'>
+            <div>Monday</div>
+            <div>Tuesday</div>
+            <div>Wednesday</div>
+            <div>Thursday</div>
+            <div>Friday</div>
+            <div>Saturday</div>
+            <div>Sunday</div>
+        </div>
+        <div id='classes'>
+        {{#sections}}
+            {{#.}}
+            <div style="background-color: red; position: relative; width: 14.28%; top: {{third}}%; height: {{second}}%">{{first.subject.title}}<br>{{first.start_time}}-{{first.end_time}}</div>
+            {{/.}} 
+        {{/sections}}
+        </div>
+
+    </div>
+
+</div>
+
+{{> footer}}
