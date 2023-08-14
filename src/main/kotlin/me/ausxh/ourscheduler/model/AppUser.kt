@@ -21,9 +21,9 @@ class AppUser constructor() {
     var username: String? = null
     var password: String? = null
 
-    @OneToMany(cascade = [CascadeType.ALL])
+    @ManyToMany(cascade = [CascadeType.ALL])
     var courseList: Set<Course?> = setOf<Course>()
 
-    @OneToMany(cascade = [CascadeType.ALL])
+    @ManyToMany(cascade = [CascadeType.ALL])
     var subjectList: Set<Subject?> = setOf<Subject>()
 }
