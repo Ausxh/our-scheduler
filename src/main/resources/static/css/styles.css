@@ -96,23 +96,21 @@ button {
     margin-left: 5px;
 }
 
-#calendarDays {
-    display: flex;
+#calendarContent {
     width: 100%;
 }
 
-#calendarDays div {
-    padding: 30px;
+.calendarDays {
+    padding-top: 30px;
+    padding-bottom: 30px;
     width: 100%;
     text-align: center;
-    border: 1px solid;
 }
 
 #times {
     margin-top: 78.5px;
     margin-right: 10px;
     text-align: right;
-    border: 1px solid;
 }
 
 #classes {
@@ -122,8 +120,11 @@ button {
     border: 1px solid;
 }
 
-#classes div {
-    padding: 3px;
+.dayCol {
+    flex-grow: 1;
+    flex-basis: 0;
+    min-width: 0;
+    display: inline-block;
     margin: 3px;
 }
 

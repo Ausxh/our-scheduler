@@ -12,23 +12,87 @@
         {{/times}}
     </div>
     <div id='calendarContent'>
-        <div id='calendarDays'>
-            <div>Monday</div>
-            <div>Tuesday</div>
-            <div>Wednesday</div>
-            <div>Thursday</div>
-            <div>Friday</div>
-            <div>Saturday</div>
-            <div>Sunday</div>
-        </div>
         <div id='classes'>
-        {{#sections}}
-            {{#.}}
-            <div style="background-color: red; position: relative; width: 14.28%; top: {{third}}%; height: {{second}}%">{{first.subject.title}}<br>{{first.start_time}}-{{first.end_time}}</div>
-            {{/.}} 
-        {{/sections}}
-        </div>
+            <div class="dayCol">
+                <div class="calendarDays">Monday</div>
+                <div style="position: relative; width: 100%; height: 100%">
+                    {{#sections.0}}
+                    {{#.}}
+                    <div style="background-color: red; position: absolute; top: {{third}}%; width:100%; height: {{second}}%">{{first.subject.title}}<br>{{first.start_time}}-{{first.end_time}}</div>
+                    {{/.}} 
+                    {{/sections.0}}
+                </div>
+            </div>
 
+            <div class="dayCol">
+                <div class="calendarDays">Tuesday</div>
+                <div style="position: relative; width: 100%; height: 100%">
+                    {{#sections.1}}
+                    {{#.}}
+                    <div style="background-color: red; position: absolute; top: {{third}}%; width: 100%; height: {{second}}%">{{first.subject.title}}<br>{{first.start_time}}-{{first.end_time}}</div>
+                    {{/.}} 
+                    {{/sections.1}}
+                </div>
+            </div>
+
+            <div class="dayCol">
+                <div class="calendarDays">Wednesday</div>
+                <div style="position: relative; width: 100%; height: 100%">
+                    {{#sections.2}}
+                    {{#.}}
+                    <div style="background-color: red; position: absolute; top: {{third}}%; width: 100%; height: {{second}}%">{{first.subject.title}}<br>{{first.start_time}}-{{first.end_time}}</div>
+                    {{/.}} 
+                    {{/sections.2}}
+                </div>
+            </div>
+
+            <div class="dayCol">
+                <div class="calendarDays">Thursday</div>
+                <div style="position: relative; width: 100%; height: 100%">
+                    {{#sections.3}}
+                    {{#.}}
+                    <div style="background-color: red; position: absolute; top: {{third}}%; width: 100%; height: {{second}}%">{{first.subject.title}}<br>{{first.start_time}}-{{first.end_time}}</div>
+                    {{/.}} 
+                    {{/sections.3}}
+                </div>
+            </div>
+
+
+            <div class="dayCol">
+                <div class="calendarDays">Friday</div>
+                <div style="position: relative; width: 100%; height: 100%">
+                    {{#sections.4}}
+                    {{#.}}
+                    <div style="background-color: red; position: absolute; top: {{third}}%; width: 100%; height: {{second}}%">{{first.subject.title}}<br>{{first.start_time}}-{{first.end_time}}</div>
+                    {{/.}} 
+                    {{/sections.4}}
+                </div>
+            </div>
+
+
+            <div class="dayCol">
+                <div class="calendarDays">Saturday</div>
+                <div style="position: relative; width: 100%; height: 100%">
+                    {{#sections.5}}
+                    {{#.}}
+                    <div style="background-color: red; position: absolute; top: {{third}}%; width: 100%; height: {{second}}%">{{first.subject.title}}<br>{{first.start_time}}-{{first.end_time}}</div>
+                    {{/.}} 
+                    {{/sections.5}}
+                </div>
+            </div>
+
+
+            <div class="dayCol">
+                <div class="calendarDays">Sunday</div>
+                <div style="position: relative; width: 100%; height: 100%">
+                    {{#sections.6}}
+                    {{#.}}
+                    <div style="background-color: red; position: absolute; top: {{third}}%; width: 100%; height: {{second}}%">{{first.subject.title}}<br>{{first.start_time}}-{{first.end_time}}</div>
+                    {{/.}} 
+                    {{/sections.6}}
+                </div>
+            </div>
+        </div>
     </div>
 
 </div>
