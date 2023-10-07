@@ -127,5 +127,30 @@ class CourseController(private val appUserRepository: AppUserRepository, private
 
         return "viewSchedule"
     }
+
+    @PostMapping("/addUserClasses")
+    fun addUserClasses(@RequestParam("classes") classList: Array<Int>, @CookieValue("id", required=false) userId: UUID?, response: HttpServletResponse) : String {
+
+        var user: AppUser? = null
+        if(userId != null) {
+            user = appUserRepository.findUserById(userId).get(0)
+        } 
+
+        if (user == null) {
+            user = AppUser()
+            appUserRepository.save(user)
+            response.addCookie(Cookie("id", user.id.toString()))
+        }
+
+        for(course in classList) {
+            val curCourse: Course? = courseRepository.findByIdOrNull(course)
+            user.courseList += curCourse
+        }
+
+        appUserRepository.save(user)
+        return "redirect:/"
+    }
+
+
 }
 

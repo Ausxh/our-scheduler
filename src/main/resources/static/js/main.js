@@ -49,3 +49,12 @@ function viewSchedule(button) {
     var url = "/viewSchedule?classes=" + encodeURIComponent(idList.join(","));
     window.location.href = url;
 }
+
+function addUserClasses() {
+    var parameters = location.search.substring(1).split("&")
+    var url = "/addUserClasses?" + parameters
+    fetch(url, {
+        method: 'POST'
+    })
+
+}
