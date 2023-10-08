@@ -22,8 +22,8 @@ class AppUser constructor() {
     var password: String? = null
 
     @ManyToMany(cascade = [CascadeType.ALL])
-    var courseList: Set<Course?> = setOf<Course>()
+    var courseList: MutableSet<Course?> = mutableSetOf<Course?>()
 
     @ManyToMany(cascade = [CascadeType.ALL])
-    var subjectList: Set<Subject?> = setOf<Subject>()
+    var subjectList: MutableSet<Subject?> = mutableSetOf<Subject?>()
 }

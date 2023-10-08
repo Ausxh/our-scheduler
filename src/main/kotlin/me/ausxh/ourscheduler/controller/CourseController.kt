@@ -141,7 +141,8 @@ class CourseController(private val appUserRepository: AppUserRepository, private
             appUserRepository.save(user)
             response.addCookie(Cookie("id", user.id.toString()))
         }
-
+        
+        user.courseList.clear()
         for(course in classList) {
             val curCourse: Course? = courseRepository.findByIdOrNull(course)
             user.courseList += curCourse
