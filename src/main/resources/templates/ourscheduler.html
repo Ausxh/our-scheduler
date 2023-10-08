@@ -49,6 +49,29 @@
         </div>
     </div>
 
+    <h1>Current Schedule</h1>
+    <div id="currentSchedule">
+        <table>
+            <tr>
+                <th>CourseName</th>
+                <th>Instructor</th>
+                <th>Days</th>
+                <th>Times</th>
+            </tr>
+
+            <tr>
+            {{#classes}}
+            <tr>
+                <td>{{subject.symbol}}</td>
+                <td>{{instructor}}
+                <td>{{days}}
+                <td>{{times}}
+            </tr>
+            {{/classes}}
+
+        </table>
+    </div>
+
     <div id="schedule">
         <h1>Schedules</h1>
     </div>

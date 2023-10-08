@@ -17,6 +17,12 @@ main {
     margin: 20px 80px;
 }
 
+th {
+    text-align: left;
+    border: 1px solid black;
+    padding: 10px;
+}
+
 #logo {
     float: left;
     color: #FFFFFF;
@@ -44,7 +50,7 @@ main {
     align-items: center;
 }
 
-#configuration table {
+table {
     border-collapse: collapse;
     width: 100%;
 }
@@ -53,7 +59,7 @@ main {
     text-align: left;
 }
 
-#configuration td {
+td {
     border: 1px solid black;
     padding: 10px;
 }
@@ -134,16 +140,3 @@ button {
     margin-top: 20px;
 }
 
-#availableSections {
-    padding: 5px;
-    padding-left: 0px;
-    max-width: 100%;
-    margin: 0;
-
-}
-
-#availableSections td, th {
-    padding: 20px;
-    padding-left: 0px;
-    text-align: left;
-}

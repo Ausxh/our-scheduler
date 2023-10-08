@@ -3,6 +3,7 @@ package me.ausxh.ourscheduler.controller;
 import me.ausxh.ourscheduler.repository.*
 import me.ausxh.ourscheduler.model.Course
 import me.ausxh.ourscheduler.model.Subject
+import me.ausxh.ourscheduler.model.AppUser
 
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model
@@ -20,10 +21,15 @@ class HtmlController(private val appUserRepository: AppUserRepository) {
     fun ourscheduler(@CookieValue(value = "id") userId: UUID?, model: Model): String {
         model["pageTitle"] = "ourscheduler"
         var subjectList: List<Subject?> = listOf<Subject?>()
-        if(userId != null) 
-            subjectList = appUserRepository.findUserById(userId).get(0)?.subjectList!!.toList()
+        var classList: List<Course?> = listOf<Course?>()
+        if(userId != null) {
+            val user: AppUser? = appUserRepository.findUserById(userId).get(0)
+            subjectList = user?.subjectList.orEmpty().toList()
+            classList = user?.courseList.orEmpty().toList()
+        }
 
         model["subjects"] = subjectList
+        model["classes"] = classList
         return "ourscheduler"
     }
 
