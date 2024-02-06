@@ -29,6 +29,9 @@ function generateSchedules()
             scheduleList.appendChild(div)
             div.append(schedButton)
         }
+	if(!scheduleList.firstChild) {
+		scheduleList.innerHTML = "Sorry there are no schedules available for that combination of classes"
+	}
     }
 
     // Send a request
